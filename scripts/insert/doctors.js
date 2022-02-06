@@ -1,0 +1,1 @@
+// insert multiple new doctor documents into the doctors collection
