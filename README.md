@@ -2,12 +2,6 @@
 
 # An Introduction to MongoDB
 
-## Prerequisites
-
-- Basic JavaScript
-- [NoSQL Study](https://git.generalassemb.ly/ga-wdi-boston/nosql-study)
-- [MongoDB Study](https://git.generalassemb.ly/ga-wdi-boston/mongodb-study)
-
 ## Objectives
 
 By the end of this, developers should be able to:
@@ -19,10 +13,9 @@ By the end of this, developers should be able to:
 ## Preparation
 
 1. Fork and clone this repository.
-  [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
-1. Create a new branch, `training`, for your work.
-1. Checkout to the `training` branch.
-1. Install dependencies with `npm install`.
+2. Create a new branch, `training`, for your work.
+3. Checkout to the `training` branch.
+
 
 ## Introduction
 
@@ -43,14 +36,14 @@ What does this mean?
 > MongoDB stores data records as BSON documents. BSON is a binary representation of JSON documents, though it contains more data types than JSON.
 > [mongodb](https://docs.mongodb.com/manual/core/document/#documents)
 
-![document](https://docs.mongodb.com/manual/_images/crud-annotated-document.bakedsvg.svg)
+![document](https://docs.mongodb.com/manual/images/crud-annotated-document.bakedsvg.svg)
 
 #### Collection
 
 > MongoDB stores documents in collections.
 > [mongodb](https://docs.mongodb.com/manual/core/databases-and-collections/#collections)
 
-![collections](https://docs.mongodb.com/manual/_images/crud-annotated-collection.bakedsvg.svg)
+![collections](https://docs.mongodb.com/manual/images/crud-annotated-collection.bakedsvg.svg)
 
 #### Demo:  Data Types
 
@@ -195,11 +188,11 @@ terminal (not the Mongo shell!).
 
 ## Retrieving Documents from a Collection
 
-- [Querying](https://docs.mongodb.org/getting-started/shell/query/)
+- [Querying](https://docs.mongodb.com/manual/tutorial/query-documents/)
   - Overview of retrieving data from MongoDB.
-- [Queries](https://docs.mongodb.org/manual/reference/mongo-shell/#queries)
+- [Query an Array of Embedded Documents](https://docs.mongodb.com/manual/tutorial/query-array-of-documents/)
   - More detailed overview on retrieving data.
-- [Query Operators](https://docs.mongodb.com/manual/reference/operator/query/)
+- [Query Operators](https://docs.mongodb.com/manual/tutorial/query-documents/#specify-conditions-using-query-operators)
   - Documentation on operators for retrieving data (ex. greater than is `$gt`)
 - [`find`](https://docs.mongodb.org/manual/reference/method/db.collection.find/)
   - Detailed documentation on the `find` collection method.
@@ -333,9 +326,9 @@ Write a query to get all the ingredients with a unit of `tbsp`.
 
 ## Deleting Documents
 
-- [Removing Data](https://docs.mongodb.org/getting-started/shell/remove/)
+- [Removing Data](https://docs.mongodb.com/manual/tutorial/remove-documents/)
   - Overview of removing documents from a collection.
-- [`deleteOne`](https://docs.mongodb.com/manual/reference/method/db.collection.deleteOne/)
+- [`deleteOne`](https://docs.mongodb.com/manual/reference/method/db.collection.deleteOne/#mongodb-method-db.collection.deleteOne)
   - Detailed documentation of MongoDB's `deleteOne` collection method.
 - [`deleteMany`](https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/)
   - Detailed documentation of MongoDB's `deleteMany` collection method.
@@ -370,9 +363,9 @@ Remove ingredients that have `ml` as their unit of measure.
 
 ## Changing the Data in Documents in a Collection
 
-- [Updating Data](https://docs.mongodb.org/getting-started/shell/update/)
+- [Updating Data](https://docs.mongodb.com/manual/tutorial/update-documents/)
   - Overview of changing documents.
-- [`updateOne`](https://docs.mongodb.com/manual/reference/method/db.collection.updateOne/#db.collection.updateOne)
+- [`updateOne`](https://docs.mongodb.com/manual/reference/method/db.collection.updateOne/)
   - Documentation of MongoDB's `updateOne` collection method which updates one
       document.
 - [`updateMany`](https://docs.mongodb.com/manual/reference/method/db.collection.updateMany/#db.collection.updateMany)
@@ -409,15 +402,15 @@ Update a couple of ingredients' units.
 
 ## Adding a Document to a Collection
 
-- [Inserting data](https://docs.mongodb.org/getting-started/shell/insert/)
+- [Inserting data](https://docs.mongodb.com/manual/tutorial/insert-documents/)
   - Overview of adding documents to a collection.
-- [`insertOne`](https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/#db.collection.insertOne)
+- [`insertOne`](https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/#mongodb-method-db.collection.insertOne)
   - Documentation of MongoDB's `insertOne` collection method which inserts one
       document.
-- [`insertMany`](https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/#db.collection.insertMany)
+- [`insertMany`](https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/#mongodb-method-db.collection.insertMany)
   - Documentation of MongoDB's `insertMany` collection method which inserts
       multiple documents.
-- [`insert`](https://docs.mongodb.org/manual/reference/method/db.collection.insert/)
+- [`insert`](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
   - Detailed documentation of MongoDB's `insert` collection method.
 
 Next, we'll use the `insertOne` collection method to add another person.  We'll
@@ -442,18 +435,22 @@ Add a few ingredients to the `ingredients` collection using `insert`.
 
 ### Sub-Document
 
-![subdoc](https://docs.mongodb.com/manual/_images/data-model-denormalized.bakedsvg.svg)
+![subdoc](https://docs.mongodb.com/manual/images/data-model-denormalized.bakedsvg.svg)
+
+[Read about sub documents here](https://docs.mongodb.com/manual/core/data-modeling-introduction/#embedded-data)
 
 ### Reference
 
-![reference](https://docs.mongodb.com/manual/_images/data-model-normalized.bakedsvg.svg)
+![reference](https://docs.mongodb.com/manual/images/data-model-normalized.bakedsvg.svg)
+
+[Read about references here](https://docs.mongodb.com/manual/core/data-modeling-introduction/#references)
 
 ## Additional resources
 
 - [BSON Types](https://docs.mongodb.org/manual/reference/bson-types/)
 - [Data Model Examples and Patterns](https://docs.mongodb.com/manual/applications/data-models/)
 - [optional GUI client - MongoDB Compass](https://www.mongodb.com/products/compass)
-- [Data aggregation](https://docs.mongodb.org/getting-started/shell/aggregation/)
+- [Data aggregation](https://docs.mongodb.com/spark-connector/master/python/aggregation/)
   - Overview of summarizing documents.
 - [`aggregate`](https://docs.mongodb.org/manual/reference/method/db.collection.aggregate/)
   - Detailed documentation on the `aggregate` collection method.
